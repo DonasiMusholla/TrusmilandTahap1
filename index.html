@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donasi Inventaris Musholla Trusmiland Tengahtani 4A</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        :root {
+            --primary: #1e5f38;
+            --secondary: #8bc34a;
+            --dark: #2b2b2b;
+            --light: #f4f7f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(30, 95, 56, 0.88), rgba(30, 95, 56, 0.88)), url('foto1.png') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 6rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            font-size: 1.1rem;
+            color: #e0eedb;
+        }
+
+        .btn {
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #7cb342;
+        }
+
+        .btn-orange {
+            background-color: #e67e22;
+        }
+        .btn-orange:hover {
+            background-color: #d35400;
+        }
+
+        /* Container & Sections */
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        section h2 {
+            color: var(--primary);
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Info Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 1rem;
+        }
+
+        .info-card {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--primary);
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            height: 240px;
+            background: #f0f0f0;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.75);
+            color: white;
+            padding: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Form */
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #154227;
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            nav { flex-direction: column; gap: 10px; text-align: center; padding: 1rem; }
+            nav ul { flex-direction: column; gap: 10px; width: 100%; }
+            .hero h1 { font-size: 1.8rem; }
+            section { padding: 1.5rem; }
+            
+            /* Responsive Table */
+            table, thead, tbody, th, td, tr { display: block; }
+            thead tr { position: absolute; top: -9999px; left: -9999px; }
+            tr { border: 1px solid #ccc; margin-bottom: 10px; }
+            td { border: none; border-bottom: 1px solid #eee; position: relative; padding-left: 50% !important; text-align: right; }
+            td:before { position: absolute; top: 12px; left: 12px; width: 45%; padding-right: 10px; white-space: nowrap; font-weight: bold; text-align: left; }
+            
+            .target-table td:nth-of-type(1):before { content: "Item Kebutuhan"; }
+            .target-table td:nth-of-type(2):before { content: "Estimasi Biaya"; }
+            
+            .donation-table td:nth-of-type(1):before { content: "Nama Donatur"; }
+            .donation-table td:nth-of-type(2):before { content: "Jumlah"; }
+            .donation-table td:nth-of-type(3):before { content: "Jenis"; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav>
+        <div class="logo">
+            <i class="fa-solid fa-mosque"></i> Musholla Trusmiland Tengahtani 4A
+        </div>
+        <ul>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#galeri">Galeri Kondisi</a></li>
+            <li><a href="#target">Target Biaya</a></li>
+            <li><a href="#daftar-donasi">Daftar Donasi</a></li>
+            <li><a href="#formulir">Form Donasi</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Wakaf & Infaq Pengadaan Inventaris</h1>
+        <p>Mari salurkan kepedulian Anda untuk melengkapi fasilitas ibadah jamaah di lingkungan Perumahan Trusmiland Tengahtani Tahap 1.</p>
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+            <a href="#formulir" class="btn"><i class="fa-solid fa-heart"></i> Ambil Bagian / Donasi</a>
+            <a href="PROPOSAL.pdf" class="btn btn-orange" download><i class="fa-solid fa-file-pdf"></i> Download Proposal (PDF)</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Tentang Section -->
+        <section id="tentang">
+            <h2><i class="fa-solid fa-info-circle"></i> Tentang Program</h2>
+            <p><strong>Musholla Trusmiland Tengahtani 4A</strong> berlokasi di Perumahan Trusmiland Tengahtani Tahap 1, Kabupaten Cirebon. Program ini bertujuan untuk mengadakan sarana penunjang peribadatan (inventaris musholla) agar jamaah dapat beribadah dengan lebih khusyuk, nyaman, dan tertib.</p>
+            
+            <div style="margin-top: 15px; background: #fffde7; padding: 15px; border-radius: 6px; border: 1px solid #fff59d;">
+                <p style="font-size: 0.95rem; margin-bottom: 10px;">Untuk transparansi informasi mengenai legalitas susunan panitia, detail teknis, dan surat permohonan sumbangan resmi DKM, Anda dapat mengunduh berkas lengkapnya di bawah ini:</p>
+                <a href="PROPOSAL.pdf" class="btn btn-orange" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;" download><i class="fa-solid fa-download"></i> Unduh Berkas Proposal Resmi</a>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4><i class="fa-solid fa-user-tie"></i> Kontak Ketua Panitia</h4>
+                    <p>0852-2497-6870 (Bapak Aziz Akbar)</p>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fa-solid fa-phone"></i> Kontak Hubungan Masyarakat</h4>
+                    <p>0812-2211-4098 (Bpk. Johan)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeri Section (Kondisi Nyata Musholla) -->
+        <section id="galeri">
+            <h2><i class="fa-solid fa-images"></i> Galeri Kondisi & Kegiatan Musholla</h2>
+            <p style="margin-bottom: 20px; color: #555;">Berikut merupakan dokumentasi fisik bangunan dan situasi ruang utama Musholla Trusmiland Tengahtani 4A saat ini:</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="foto1.png" alt="Kondisi Musholla 1">
+                    <div class="gallery-caption">Dokumentasi Kondisi Musholla - Foto 1</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="foto2.jpeg" alt="Kondisi Musholla 2">
+                    <div class="gallery-caption">Dokumentasi Kondisi Musholla - Foto 2</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="foto3.jpeg" alt="Kondisi Musholla 3">
+                    <div class="gallery-caption">Dokumentasi Kondisi Musholla - Foto 3</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="foto4.jpeg" alt="Kondisi Musholla 4">
+                    <div class="gallery-caption">Dokumentasi Kondisi Musholla - Foto 4</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="foto5.jpeg" alt="Kondisi Musholla 5">
+                    <div class="gallery-caption">Dokumentasi Kondisi Musholla - Foto 5</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Target Anggaran Section -->
+        <section id="target">
+            <h2><i class="fa-solid fa-bullseye"></i> Anggaran Kebutuhan Inventaris</h2>
+            <p>Sesuai dengan lampiran proposal, berikut adalah daftar estimasi rincian komponen inventaris dengan akumulasi target kebutuhan sebesar <strong>Rp. 30.800.000</strong>:</p>
+            <table class="target-table">
+                <thead>
+                    <tr>
+                        <th>Item Kebutuhan Inventaris</th>
+                        <th>Estimasi Biaya</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Pengadaan Karpet / Karpet Raudhoh</td><td>Rp 7.000.000</td></tr>
+                    <tr><td>Pengadaan Sound System Utama</td><td>Rp 6.000.000</td></tr>
+                    <tr><td>Pembatas Shaf / Hijab Ruangan</td><td>Rp 5.000.000</td></tr>
+                    <tr><td>Mukena @10 & Sarung @10</td><td>Rp 2.500.000</td></tr>
+                    <tr><td>Rak Sajadah, Rak Al-Qur'an & Kaligrafi hiasan</td><td>Rp 4.000.000</td></tr>
+                    <tr><td>Pengeras Suara Luar & Kipas Angin (5 Unit)</td><td>Rp 3.100.000</td></tr>
+                    <tr><td>Lain-lain (Alat Kebersihan, CCTV 2 Unit, Jam Dinding, Dll)</td><td>Rp 3.200.000</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Daftar Donasi Masuk Section -->
+        <section id="daftar-donasi">
+            <h2><i class="fa-solid fa-clipboard-list"></i> Daftar Donasi & Infaq Masuk</h2>
+            <table class="donation-table" id="donationTable">
+                <thead>
+                    <tr>
+                        <th>Nama Donatur</th>
+                        <th>Jumlah / Wujud Donasi</th>
+                        <th>Jenis Sumbangan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hamba Allah - Blok A</td>
+                        <td>Rp 1.500.000</td>
+                        <td>Uang Tunai / Transfer</td>
+                    </tr>
+                    <tr>
+                        <td>Keluarga Bpk. Budi</td>
+                        <td>Rp 500.000</td>
+                        <td>Uang Tunai</td>
+                    </tr>
+                    <tr>
+                        <td>Ibu Siti - RT 02</td>
+                        <td>5 Buah Al-Qur'an & Mukena</td>
+                        <td>Barang / Material</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Formulir Donasi Section -->
+        <section id="formulir">
+            <h2><i class="fa-solid fa-hand-holding-heart"></i> Formulir Konfirmasi Donasi</h2>
+            <p style="margin-bottom: 15px;">Jika Anda telah menyalurkan bantuan berupa dana transfer/tunai atau penyerahan barang, harap isi form ini untuk mempermudah pembaruan data:</p>
+            
+            <form id="donationForm">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap / Hamba Allah</label>
+                    <input type="text" id="nama" placeholder="Contoh: Bpk. Ahmad / Hamba Allah" required>
+                </div>
+                <div class="form-group">
+                    <label for="jenis">Jenis Sumbangan</label>
+                    <select id="jenis" required>
+                        <option value="Uang Tunai / Transfer">Uang Tunai / Transfer</option>
+                        <option value="Barang / Material">Barang / Material (Sajadah, Al-Qur'an, dll)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="jumlah">Jumlah Dana / Keterangan Barang</label>
+                    <input type="text" id="jumlah" placeholder="Contoh: Rp 300.000 atau 2 Gulung Karpet" required>
+                </div>
+                <button type="submit" class="btn" style="width: 100%; font-size: 1rem;"><i class="fa-solid fa-paper-plane"></i> Kirim data konfirmasi</button>
+            </form>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 DKM Musholla Trusmiland Tengahtani 4A. Seluruh Hak Cipta Dilindungi.</p>
+        <p style="font-size: 0.8rem; margin-top: 8px; color: #b2d7bc;">"Siapa yang membangun masjid karena Allah, maka Allah akan membangunkan baginya rumah di surga." (HR. Bukhari & Muslim)</p>
+    </footer>
+
+    <!-- JavaScript Interaktif -->
+    <script>
+        document.getElementById('donationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nama = document.getElementById('nama').value;
+            const jenis = document.getElementById('jenis').value;
+            const jumlah = document.getElementById('jumlah').value;
+            
+            const table = document.getElementById('donationTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow(0);
+            
+            const cellNama = newRow.insertCell(0);
+            const cellJumlah = newRow.insertCell(1);
+            const cellJenis = newRow.insertCell(2);
+            
+            cellNama.innerHTML = nama;
+            cellJumlah.innerHTML = jumlah;
+            cellJenis.innerHTML = jenis;
+            
+            alert('Terima kasih! Konfirmasi data donasi Anda berhasil ditambahkan ke daftar tabel sementara.');
+            document.getElementById('donationForm').reset();
+        });
+    </script>
+</body>
+</html>
